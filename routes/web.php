@@ -22,6 +22,7 @@ Route::get('/docs', 'HomeController@docs')->name('docs');
 Route::get('/downloads', 'HomeController@downloads')->name('downloads');
 
 Route::get('/account', 'HomeController@account')->name('account');
+Route::patch('/account/update',  ['as' => 'account.update', 'uses' => 'HomeController@updateAccount']);
 
 Route::get('/hosts', 'HostController@index')->name('host.index');
 

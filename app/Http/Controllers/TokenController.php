@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Token;
+use App\Host;
 use Illuminate\Http\Request;
 
 class TokenController extends Controller
@@ -48,10 +49,16 @@ class TokenController extends Controller
     {   
         $token = new Token();
         $token->token = str_random(60);
-        $token->user_id = auth()->user()->id;;
+        $token->user_id = auth()->user()->id;
         $token->description = $request->description;
         $token->status = 'Active';
         $token->usage = 0;
+
+        $host = new Host();
+        $host->user_id = auth()->user()->id;;
+        $host->host_name = $request->description;
+        $host->save();
+
         $token->save();
         return back();
 

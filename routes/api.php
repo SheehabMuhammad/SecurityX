@@ -20,6 +20,11 @@ Route::get('/user', function (Request $request) {
     return Auth::user();
 });
 
+
+Route::post('/hosts/device/new', function(Request $request) {
+    return $request;
+});
+
 Route::get('/hosts/devices/{id}', function($id) {
     return Device::All();
 });

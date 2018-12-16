@@ -3,24 +3,25 @@
 @section('content')
             <div class="row">
                 <div class="col-lg-10" style="margin: 0 auto;">     
-                    <form class="card">
+                    <form class="card" method="post" action="{{route('account.update', $user)}}">
+                        {{ csrf_field() }}
                         <div class="card-header">
                             <strong>Your Account</strong>
                         </div>
                         <div class="card-body card-block">
                             <div class="form-group">
                                 <label for="name" class=" form-control-label">Full Name</label>
-                            <input type="text" id="name" placeholder="Enter your full name" value="{{auth()->user()->name}}" class="form-control">
+                            <input type="text" name="name" id="name" placeholder="Enter your full name" value="{{auth()->user()->name}}" class="form-control">
                             </div>
 
                             <div class="form-group">
                                 <label for="email" class=" form-control-label">Email Address</label>
-                                <input type="text" id="email" placeholder="Enter your email address" value="{{auth()->user()->email}}" class="form-control">
+                                <input type="text" name="email" id="email" placeholder="Enter your email address" value="{{auth()->user()->email}}" class="form-control">
                             </div>
 
                             <div class="form-group">
                                 <label for="password" class="form-control-label">{{ __('New Password') }}</label>
-                                <input type="password" id="password" placeholder="Enter New Password" class="form-control">
+                                <input type="password" name="password" id="password" placeholder="Enter New Password" class="form-control">
                             </div>
                             
                             <div class="form-group">

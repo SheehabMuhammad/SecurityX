@@ -68,8 +68,8 @@
                         New token is required for each and every computer you want to monitor by SecurityX. Do you want to proceed?
                     </p>
                     <div class="form-group">
-                        <label>{{ __('Write one line description') }}</label>
-                        <input id="description" class="au-input au-input--full" type="text" name="description" required placeholder="{{ __('exaple: To use on my Windows PC') }}">
+                        <label>{{ __('Write your Host Device Name') }}</label>
+                        <input id="description" class="au-input au-input--full" type="text" name="description" required placeholder="{{ __('exaple: John Doe\' PC - 01') }}">
                     </div>
                 </div>
                 <div class="modal-footer">

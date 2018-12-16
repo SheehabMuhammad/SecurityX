@@ -17,6 +17,7 @@
                         <tr>
                             <th>#</th>
                             <th>Device ID</th>
+                            <th>Host ID</th>
                             <th>Type</th>
                             <th>Status</th>
                             <th>Updated</th>
@@ -27,6 +28,7 @@
                         <tr>
                             <td>{{ $device->id }}</td>
                             <td>{{ $device->original_device_id }}</td>
+                            <td>{{ $device->host_id }}</td>
                             <td>{{ $device->type }}</td>
                             <td style="cursor: pointer" data-device-id="{{ $device->id }}" data-host-id="{{ $device->host_id }}" class="status {{ $device->status == 'Granted' ? ' process' : 'denied' }}">{{ $device->status }}</td>
                             <td>{{ $device->updated_at->diffForHumans() }}</td>
