@@ -22,11 +22,7 @@
                             <p>After downloading the software, Double click to open it. Installation wizard will start, it will ask for an API Token while installation. Go to API Token page from your dashboard. Click on add Token, fill in the form and hit add. You'll see your new API token on the list. Copy the token and paste it in your SecurityX desktop app.</p>
                             
                         </div><!--section-block-->
-                        <div id="step3" class="section-block">
-                            <h3 class="block-title">Step Three</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
-                            </p>
-                        </div><!--section-block-->
+                        
                     </section><!--doc-section-->
                     
                 </div><!--content-inner-->
